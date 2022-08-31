@@ -18,33 +18,38 @@
         <h1>여기는 많이 본 TV연예 뉴스 입니다.</h1>
 
         <ul>
-            {% for in range(0, ent_len) %}
 
-                <a href="ent_href[i]"><li>{{ ent[i] }}</li></a>
+            {% for i in range(0, ent_len) %}
 
-            {% endfor %}
+                <a href="{{ent_href[i]}}"><li>{{ ent[i] }}</li></a>
+
+            {% endfor %} 
+
         </ul>
-  
+         
+    </div>
     <div class="ent_content">
         <h1>여기는 오늘의유머 영역입니다.</h1>
 
         <ul>
-            {% for in range(0, today_len) %}
+            {% for i in range(0, today_len) %}
 
-                <a href="today_href[i]"><li>{{ today[i] }}</li></a>
+                <a href="{{today_href[i]}}"><li>{{ today[i] }}</li></a>
 
             {% endfor %}
         </ul>
+      
     </div>
 
     <div class="ent_content">
         <h1>여기는 클리앙 추천 게시글 입니다.</h1>
         <ul>
-            {% for in range(0, clien_len) %}
+            {% for i in range(0, clien_len) %}
 
-                <a href="clien _href[i]"><li>{{ clien[i] }}</li></a>
+                <a href="{{clien_href[i]}}"><li>{{ clien[i] }}</li></a>
 
             {% endfor %}
+     
         </ul>
     </div>
 </body>

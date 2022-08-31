@@ -11,7 +11,7 @@ def ent():
 
     for i in soup.select("#ranking_news > div > div.rank_lst > ul > li"):
         list_ent.append (i.find("a").text)
-        list_ent_href.append(i.find("a")["href"])
+        list_ent_href.append("https://entertain.naver.com/" + i.find("a")["href"])
 
     return list_ent, list_ent_href
 
@@ -27,7 +27,7 @@ def today():
 
     for i in soup.find_all("td", class_="subject"):
         list_today.append(i.text)
-        list_today_href("http://www.todayhumor.co.kr" + i.find("a")["href"])
+        list_today_href.append("http://www.todayhumor.co.kr" + i.find("a")["href"])
 
     return list_today, list_today_href
 

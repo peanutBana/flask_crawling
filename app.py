@@ -7,7 +7,7 @@ import crawling
 @app.route('/')
 def hello():
     
-    list_ent, list_ent_href = crawling.ent()
+    list_ent, list_ent_href = crawling.ent()        #file.func
     list_today, list_today_href = crawling.today()
     list_clien, list_clien_href = crawling.clien()
         
@@ -18,7 +18,7 @@ def hello():
                                         today_href = list_today_href,  
                                         clien_href = list_clien_href,
                                         ent_len = len(list_ent),
-                                        today_len = len(list_today),
+                                         today_len = len(list_today),
                                         clien_len = len(list_clien)
                                         )  
 
