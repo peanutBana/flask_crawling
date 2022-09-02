@@ -48,6 +48,8 @@ def result():
 @app.route('/naver_shopping')
 def naver_shopping():
      
+
+
     driver  = webdriver.Chrome('./chromedriver')
 
     #driver.implicitly_wait(3)
@@ -58,6 +60,15 @@ def naver_shopping():
 
     for i in soup.select('#__next > div > div.style_container__UxP6u > div.style_inner__i4gKy > div.style_content_wrap__Cdqnl > div.style_content__xWg5l > ul > div > div'):
         print(i.find('a',class_='basicList_link__JLQJf').text)
+
+
+    #driver.find_element_by_class_name("subFilter_filter__O_rt").click()
+
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+
+    for i in soup.select('#__next > div > div.style_container__UxP6u > div.style_inner__i4gKy > div.style_content_wrap__Cdqnl > div.style_content__xWg5l > ul > div > div'):
+        print(i.find('a',class_='basicList_link__JLQJf').text)
+
     
     return render_template('shopping.html')
 

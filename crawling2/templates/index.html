@@ -21,29 +21,36 @@
     <div id="wrap">
 
         <div>
-            <form action="result" method="POST">
+            <div class="news ">
+                <form action="result" method="POST">
 
-                <div class="form-group">
-                    <h1>키워드 입력</h1>
-                    <input type="text" class="form-control" name="input1">
-                </div>
+                    <div class="form-group">
+                        <h1>키워드 입력</h1>
+                        <input type="text" class="form-control" name="input1">
+                    </div>
 
-                <div class="form-group">
-                    <h1>페이지 입력</h1>
-                    <input type="number" class="form-control" name="input2">
-                </div>
+                    <div class="form-group">
+                        <h1>페이지 입력</h1>
+                        <input type="number" class="form-control" name="input2">
+                    </div>
 
-                <button type="submit" class="btn btn-default">제출</button>
-            </form>
+                    <button type="submit" class="btn btn-default">제출</button>
+                </form>
+            </div>
         </div>
 
         <div>
+            <div class="naver">   
+                <form action="/naver_shopping">
 
-            <form action="/naver_shopping">
-                <button type="submit">네이버 쇼핑 크롤링 셀레니움</button> 
+                    <h1>네이버 쇼핑 크롤링</h1>
 
-            </form>
+                    <input type="text" class="form-control" name="input3">
 
+                    <button type="submit" class="btn btn-default">네이버 쇼핑 크롤링 셀레니움</button> 
+
+                </form>
+            </div>
         </div>
 
     </div>
